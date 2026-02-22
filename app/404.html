@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Страница не найдена | Looking</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    .site-header, .site-footer {
+      font-family: raleway-l, sans-serif;
+      background: #fff;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #eee;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .site-footer {
+      border-top: 1px solid #eee;
+      border-bottom: none;
+      justify-content: center;
+      gap: 2rem;
+    }
+    .nav-menu a {
+      margin-left: 1.5rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+    }
+    .nav-menu a.active {
+      color: #000;
+      font-weight: 700;
+      border-bottom: 2px solid #333;
+      padding-bottom: 0.25rem;
+    }
+    .logo-text {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #333;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+    .not-found { 
+      text-align: center; 
+      padding: 60px 20px; 
+      min-height: 60vh;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .not-found h1 { 
+      font-size: 120px; 
+      margin-bottom: 10px;
+      color: #333;
+      line-height: 1;
+    }
+    .not-found h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #555;
+      font-weight: 400;
+    }
+    .not-found p {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 30px;
+    }
+    .useful-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      margin: 40px 0;
+      text-align: left;
+    }
+    .link-group {
+      min-width: 150px;
+    }
+    .link-group h3 {
+      font-size: 18px;
+      margin-bottom: 15px;
+      color: #333;
+      font-weight: 600;
+      border-bottom: 2px solid #f0f0f0;
+      padding-bottom: 8px;
+    }
+    .link-group ul {
+      list-style: none;
+      padding: 0;
+    }
+    .link-group li {
+      margin-bottom: 10px;
+    }
+    .link-group a {
+      color: #0066cc;
+      text-decoration: none;
+      font-size: 15px;
+    }
+    .link-group a:hover {
+      text-decoration: underline;
+    }
+    .action-buttons {
+      margin-top: 30px;
+    }
+    .action-buttons .pure-button {
+      margin: 0 10px 10px;
+      padding: 12px 24px;
+      font-size: 16px;
+    }
+    .search-box {
+      margin: 30px 0;
+    }
+    .search-box input {
+      padding: 10px;
+      width: 300px;
+      max-width: 80%;
+      border: 1px solid #ddd;
+      border-radius: 4px 0 0 4px;
+      font-size: 16px;
+    }
+    .search-box button {
+      padding: 10px 20px;
+      background: #333;
+      color: white;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .search-box button:hover {
+      background: #555;
+    }
+    @media (max-width: 767.98px) {
+      .site-header { flex-direction: column; gap: 0.5rem; }
+      .nav-menu a { margin: 0 0.75rem; }
+      .useful-links { flex-direction: column; align-items: center; }
+      .link-group { text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<header class="site-header">
+  <a href="index.html" class="logo-text">Looking</a>
+  <nav class="nav-menu">
+    <a href="index.html">Главная</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contacts.html">Контакты</a>
+    <a href="404.html" class="active">404</a>
+  </nav>
+</header>
+
+<main class="not-found">
+  <h1>404</h1>
+  <h2>Страница не найдена</h2>
+  <p>Возможно, она была удалена или перемещена. Воспользуйтесь поиском или ссылками ниже.</p>
+
+  <div class="search-box">
+    <form action="search.html" method="get">
+      <input type="text" placeholder="Поиск по сайту..." name="q">
+      <button type="submit">Найти</button>
+    </form>
+  </div>
+
+  <div class="useful-links">
+    <div class="link-group">
+      <h3>Навигация</h3>
+      <ul>
+        <li><a href="index.html">Главная страница</a></li>
+        <li><a href="catalog.html">Каталог товаров</a></li>
+        <li><a href="new-collection.html">Новая коллекция</a></li>
+        <li><a href="sale.html">Распродажа</a></li>
+      </ul>
+    </div>
+    <div class="link-group">
+      <h3>Помощь</h3>
+      <ul>
+        <li><a href="faq.html">Часто задаваемые вопросы</a></li>
+        <li><a href="delivery.html">Доставка и оплата</a></li>
+        <li><a href="returns.html">Возврат товара</a></li>
+        <li><a href="size-guide.html">Таблица размеров</a></li>
+      </ul>
+    </div>
+    <div class="link-group">
+      <h3>Контакты</h3>
+      <ul>
+        <li><a href="contacts.html">Связаться с нами</a></li>
+        <li>Email: <a href="mailto:info@looking.ru">info@looking.ru</a></li>
+        <li>Тел: <a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+        <li><a href="feedback.html">Оставить отзыв</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="action-buttons">
+    <a href="index.html" class="pure-button pure-button-primary">На главную</a>
+    <a href="catalog.html" class="pure-button">В каталог</a>
+    <a href="contacts.html" class="pure-button">Связаться с нами</a>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <span>© 2025 Looking Store</span>
+  <nav class="nav-menu">
+    <a href="index.html">Главная</a>
+    <a href="catalog.html">Каталог</a>
+    <a href="faq.html">FAQ</a>
+    <a href="contacts.html">Контакты</a>
+  </nav>
+</footer>
+
+</body>
+</html>
