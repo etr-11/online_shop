@@ -2,14 +2,19 @@ header.header {
   background: #fff;
   padding: 15px 30px;
   border-bottom: 1px solid #ddd;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
 }
 
 header .pure-menu-list {
   display: flex;
   gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 header .pure-menu-link {
@@ -19,6 +24,7 @@ header .pure-menu-link {
   padding: 5px 10px;
   transition: color 0.2s, background 0.2s;
   border-radius: 4px;
+  display: inline-block;
 }
 
 header .pure-menu-link:hover {
@@ -30,6 +36,17 @@ header .pure-menu-link.active {
   font-weight: 700;
 }
 
+/* КЛЮЧЕВОЕ ДОБАВЛЕНИЕ: отступ для контента, чтобы его не перекрывал фиксированный хедер */
+.content {
+  max-width: 900px;
+  margin: 100px auto 50px auto;  /* Верхний отступ увеличен до 100px */
+  padding: 0 20px;
+  font-family: raleway-l, sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Остальные стили остаются без изменений */
 footer.footer {
   background: #f6f8fc;
   text-align: center;
@@ -38,15 +55,6 @@ footer.footer {
   color: #555;
   margin-top: 50px;
   border-top: 1px solid #ddd;
-}
-
-.content {
-  max-width: 900px;
-  margin: 50px auto;
-  padding: 0 20px;
-  font-family: raleway-l, sans-serif;
-  color: #333;
-  line-height: 1.6;
 }
 
 .contact-info p {
@@ -88,6 +96,21 @@ footer.footer {
 
 .contact-form .pure-button {
   margin-top: 10px;
+  margin-right: 8px;
+}
+
+.contact-form .field-help {
+  margin: -10px 0 10px;
+  font-size: 13px;
+  color: #666;
+}
+
+.contact-form .is-danger {
+  border-color: #c0392b !important;
+}
+
+.contact-form .field-help.is-danger {
+  color: #c0392b;
 }
 
 /* === FAQ Section === */

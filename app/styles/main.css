@@ -259,6 +259,7 @@ body {
 }
 
 .collection {
+  margin-top: 10px;
   position: absolute;
   top: 5vh;
   left: 3.5vw;
