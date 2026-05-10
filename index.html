@@ -9,25 +9,30 @@
 
   <script src="app/vendor/lenis/lenis.min.js" defer></script>
   <script src="app/scripts/app.js" defer></script>
+  <script src="app/scripts/cart.js" defer></script>
 
-  <link rel="stylesheet" href="app/styles/main.css">w
+  <link rel="stylesheet" href="app/styles/main.css">
   <link rel="stylesheet" href="app/styles/pages.css">
-
 </head>
 <body>
-  <header class="header">
-  <nav class="pure-menu pure-menu-horizontal">
-    <ul class="pure-menu-list">
-      <li class="pure-menu-item"><a href="index.html" class="pure-menu-link active">Главная</a></li>
-      <li class="pure-menu-item"><a href="app/contacts.html" class="pure-menu-link">Контакты / Отзывы</a></li>
-      <li class="pure-menu-item"><a href="app/faq.html" class="pure-menu-link">FAQ</a></li>
-      <li class="pure-menu-item"><a href="app/404.html" class="pure-menu-link">404</a></li>
-    </ul>
-  </nav>
+  <header class="header" style="display:flex; justify-content:space-between; align-items:center; padding:10px 20px; ">
+    <nav class="pure-menu pure-menu-horizontal">
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="index.html" class="pure-menu-link active">Главная</a></li>
+        <li class="pure-menu-item"><a href="app/contacts.html" class="pure-menu-link">Контакты / Отзывы</a></li>
+        <li class="pure-menu-item"><a href="app/faq.html" class="pure-menu-link">FAQ</a></li>
+        <li class="pure-menu-item"><a href="app/404.html" class="pure-menu-link">404</a></li>
+      </ul>
+    </nav>
+
+    <!-- Корзина справа -->
+    <a href="app/cart.html" class="cart-link" style="margin-left:auto; padding-right: 22px; text-decoration:none; color:inherit; display: flex; align-items: center; gap: 5px;">
+      <span>Корзина:</span>
+      <span id="cart-count">0</span>
+    </a>
   </header>
 
   <section class="show">
-
     <div class="logo">
       <a href="#" class="logo__text">Looking</a>
       <p>Extremely modern store</p>
@@ -39,7 +44,6 @@
     </div>
 
     <div class="layers">
-      
       <div class="layer1"><img src="app/images/models/6.png" alt="Alt"></div>
       <div class="layer2"><img src="app/images/models/5.png" alt="Alt"></div>
       <div class="layer3"><img src="app/images/models/4.png" alt="Alt"></div>
@@ -47,13 +51,12 @@
       <div class="layer5"><img src="app/images/models/2.png" alt="Alt"></div>
       <div class="layer6"><img src="app/images/models/1.png" alt="Alt"></div>
     </div>
-
   </section>
 
   <aside class="aside">
     <div class="items">
 
-      <div class="item">
+      <div class="item" data-name="A light evening dress for all" data-price="8960">
         <img src="app/images/items/1.png" alt="Alt">
         <div class="item__bottom">
           <div class="left">
@@ -66,7 +69,7 @@
         </div>
       </div>
 
-      <div class="item">
+      <div class="item" data-name="Cool denim evening jumpsuit" data-price="14820">
         <img src="app/images/items/2.png" alt="Alt">
         <div class="item__bottom">
           <div class="left">
@@ -79,20 +82,7 @@
         </div>
       </div>
 
-      <div class="item">
-        <img src="app/images/items/3.png" alt="Alt">
-        <div class="item__bottom">
-          <div class="left">
-            <h3>A light evening dress for all</h3>
-            <div class="price">6 890 ₽</div>
-          </div>
-          <div class="right">
-            <button class="pure-button add">+</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="item">
+      <div class="item" data-name="Elegant women's Sports T-shirt" data-price="4980">
         <img src="app/images/items/4.png" alt="Alt">
         <div class="item__bottom">
           <div class="left">
@@ -105,7 +95,7 @@
         </div>
       </div>
 
-      <div class="item">
+      <div class="item" data-name="Women's high-heeled shoes" data-price="16480">
         <img src="app/images/items/5.png" alt="Alt">
         <div class="item__bottom">
           <div class="left">
@@ -118,7 +108,7 @@
         </div>
       </div>
 
-      <div class="item">
+      <div class="item" data-name="Elegant women's trousers" data-price="10260">
         <img src="app/images/items/6.png" alt="Alt">
         <div class="item__bottom">
           <div class="left">
@@ -133,6 +123,5 @@
 
     </div>
   </aside>
-
 </body>
 </html>

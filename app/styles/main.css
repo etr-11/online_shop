@@ -45,6 +45,7 @@ body {
   height: 100vh;
   width: calc(100vw - var(--aside));
   position: fixed;
+  margin-top: 20px;
 }
 
 .layers {

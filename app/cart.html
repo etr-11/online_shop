@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Корзина</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/cart.css">
+
+</head>
+<body>
+
+<header class="header">
+  <nav>
+    <a href="../index.html">← Вернуться в магазин</a>
+  </nav>
+</header>
+
+<section class="cart-page">
+  <h1>Корзина</h1>
+
+  <div id="cart-items"></div>
+
+  <div class="cart-total">
+    Итого: <span id="total-price">0</span> ₽
+  </div>
+
+  <button id="clear-cart" class="pure-button pure-button-primary">
+    Очистить корзину
+  </button>
+</section>
+
+<script>
+const CART_KEY = "shopping_cart";
+
+function getCart() {
+  return JSON.parse(localStorage.getItem(CART_KEY)) || [];
+}
+
+function renderCart() {
+  const cart = getCart();
+  const cartItems = document.getElementById("cart-items");
+  const totalPrice = document.getElementById("total-price");
+
+  cartItems.innerHTML = "";
+
+  let total = 0;
+
+  if (cart.length === 0) {
+    cartItems.innerHTML = "<p>Корзина пуста</p>";
+    totalPrice.textContent = "0";
+    return;
+  }
+
+  cart.forEach((item, index) => {
+    total += Number(item.price);
+
+    const div = document.createElement("div");
+    div.classList.add("cart-item");
+
+    div.innerHTML = `
+      <img src="${item.image}" width="120">
+      <h3>${item.name}</h3>
+      <p>${item.price} ₽</p>
+      <button onclick="removeItem(${index})">Удалить</button>
+    `;
+
+    cartItems.appendChild(div);
+  });
+
+  totalPrice.textContent = total;
+}
+
+function removeItem(index) {
+  const cart = getCart();
+  cart.splice(index, 1);
+  localStorage.setItem(CART_KEY, JSON.stringify(cart));
+  renderCart();
+}
+
+document.getElementById("clear-cart").addEventListener("click", () => {
+  localStorage.removeItem(CART_KEY);
+  renderCart();
+});
+
+renderCart();
+</script>
+
+</body>
+</html>

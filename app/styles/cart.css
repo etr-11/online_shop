@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: raleway-l, sans-serif;
+  background: var(--bg-show);
+  min-height: 100vh;
+  color: #222;
+}
+
+.cart-header {
+  width: 100%;
+  padding: 20px 40px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #222;
+  font-weight: 600;
+  transition: .2s;
+}
+
+.back-link:hover {
+  opacity: .7;
+}
+
+.cart-page {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.cart-page h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+#cart-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cart-item {
+  background: #fff;
+  border-radius: 18px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  min-height: 180px;
+  transition: .2s;
+}
+
+.cart-item:hover {
+  transform: translateY(-2px);
+}
+
+.cart-item img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+}
+
+.cart-item-content {
+  flex: 1;
+}
+
+.cart-item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.cart-item p {
+  font-size: 18px;
+  opacity: .7;
+}
+
+.cart-item button {
+  padding: 10px 18px;
+  border: none;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: .2s;
+}
+
+.cart-item button:hover {
+  opacity: .8;
+}
+
+.cart-footer {
+  margin-top: 40px;
+  background: #fff;
+  padding: 25px;
+  border-radius: 18px;
+}
+
+.cart-total {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+#clear-cart {
+  padding: 14px 24px;
+  border: none;
+  background: #111;
+  color: white;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: .2s;
+}
+
+#clear-cart:hover {
+  opacity: .8;
+}
+
+.empty-cart {
+  background: #fff;
+  padding: 40px;
+  border-radius: 18px;
+  text-align: center;
+  font-size: 20px;
+  opacity: .6;
+}
+
+@media (max-width: 768px) {
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-item img {
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .cart-page h1 {
+    font-size: 24px;
+  }
+
+  .cart-total {
+    font-size: 20px;
+  }
+}
